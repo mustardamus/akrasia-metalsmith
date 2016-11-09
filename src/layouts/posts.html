@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <title>Posts</title>
+  </head>
+  <body>
+    {{>navigation}}
+    
+    {{#each posts}}
+      <div>
+        <a href="/{{ path }}">
+          {{ title }}
+        </a>
+
+        <div>{{{excerpt}}}</div>
+      </div>
+    {{/each}}
+  </body>
+</html>

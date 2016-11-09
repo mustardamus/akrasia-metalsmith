@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <title>Pictures</title>
+  </head>
+  <body>
+    {{#each pictures}}
+      <a href="/{{ fullpath }}">
+        <img src="/{{ thumbpath }}">
+        <small>
+          {{ country }} {{ city }}
+        </small>
+      </a>
+    {{/each}}
+  </body>
+</html>
