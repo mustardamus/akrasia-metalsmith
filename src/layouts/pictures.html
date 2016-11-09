@@ -5,6 +5,19 @@
   </head>
   <body>
     <h1>{{covers.Vienna}}</h1>
+
+    <div id="countries">
+      {{#each countries}}
+        {{this}}
+      {{/each}}
+    </div>
+
+    <div id="cities">
+      {{#each cities}}
+        {{this}}
+      {{/each}}
+    </div>
+
     {{#each pictures}}
       <a href="/{{ fullpath }}">
         <img src="/{{ thumbpath }}">
