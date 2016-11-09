@@ -1,4 +1,9 @@
 {
+  "site": {
+    "title": "Akrasia",
+    "subtitle": "Blog, Portfolio and Gallery of Sebastian Senf (@mustardamus)",
+    "url": "http://akrasia.me"
+  },
   "covers": {
     "Vienna": "100_1757.JPG",
     "Brugge": "100_0897.JPG",
