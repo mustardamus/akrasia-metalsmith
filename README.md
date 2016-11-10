@@ -67,6 +67,7 @@ are different in any aspect, you need to edit the build script. Just sayin'.
    * `cities`: Array of Strings of all city names
    * `citiesObj`: Object of Objects with country name and pictures for each city
 
+          ```javascript
           citiesObj: {
             cityName: {
               country: 'country name',
@@ -82,6 +83,7 @@ are different in any aspect, you need to edit the build script. Just sayin'.
             },
             ...
           }
+          ```
 
 4. Include metadata from `./metadata.json` and make it available to the
    template.
