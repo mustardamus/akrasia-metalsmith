@@ -91,8 +91,8 @@ are different in any aspect, you need to edit the build script. Just sayin'.
 5. Compiles the `./src/layouts/pictures.html` template with
    [EJS](http://ejs.co/).
 
-6. Copies the result from `./www/layouts/pictures.html` to
-   `./www/pictures/index.html`.
+6. Moves the result from `./www/layouts/pictures.html` to
+   `./www/pictures/index.html` and removes the empty `./www/layouts` folder.
 
 7. Minifies the result HTML with
    [html-minifier](https://github.com/kangax/html-minifier).
