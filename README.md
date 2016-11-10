@@ -15,21 +15,22 @@ became a huge fan. It's like Lego and duct tape.
 ## Tasks
 
 Each task has its own file, which is a Metalsmith build script, found in
-`./lib`. Each task can be run individually but also easily all together.
+[`./lib`](./lib). Each task can be run individually but also easily all
+together.
 
-### Assets
+### [Assets](./lib/assets.js)
+
+#### `yarn run build:assets` & `yarn run watch:assets`
 
 #### `yarn run build:scripts` & `yarn run watch:scripts` 
 
 #### `yarn run build:styles` & `yarn run watch:styles` 
 
-#### `yarn run build:assets` & `yarn run watch:assets`
-
-### Pages
+### [Pages](./lib/pages.js)
 
 #### `yarn run build:pages` & `yarn run watch:pages`
 
-### Posts
+### [Posts](./lib/posts.js)
 
 #### `yarn run build:posts` & `yarn run watch:posts`
 
@@ -97,14 +98,31 @@ are different in any aspect, you need to edit the build script. Just sayin'.
 7. Minifies the result HTML with
    [html-minifier](https://github.com/kangax/html-minifier).
 
-### General
+Note that there are no `watch` task for pictures since it is really time
+consuming to resize them all.
+
+### [General](./package.json)
 
 #### `yarn run clean`
 
+Removes `./www` completely.
+
 #### `yarn run build`
+
+Runs `yarn run clean` and then runs all `build` scripts in series. To get a
+completely ready  production site, run this command.
 
 #### `yarn run watch`
 
+Runs all `watch` scripts in parallel.
+
 #### `yarn run serve`
 
-#### `yarn run start`
+Starts a HTTP server on port `9999` with [BrowserSync](). `*.html`, `*.css` and
+`*.js` in `./www` are watched for changes and the page will be reloaded
+automatically. 
+
+#### `yarn start`
+
+Runs `yarn run watch` and `yarn run serve`. If you want to develop the site, run
+this command.
