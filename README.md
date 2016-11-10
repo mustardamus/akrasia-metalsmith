@@ -118,9 +118,9 @@ Runs all `watch` scripts in parallel.
 
 #### `yarn run serve`
 
-Starts a HTTP server on port `9999` with [BrowserSync](). `*.html`, `*.css` and
-`*.js` in `./www` are watched for changes and the page will be reloaded
-automatically. 
+Starts a HTTP server on port `9999` with [BrowserSync](https://browsersync.io).
+`*.html`, `*.css` and `*.js` in `./www` are watched for changes and the page
+will be reloaded automatically.
 
 #### `yarn start`
 

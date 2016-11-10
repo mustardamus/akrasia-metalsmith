@@ -4,7 +4,7 @@
     <title>Posts</title>
   </head>
   <body>
-    <%- include('../partials/navigation.html') %>
+    <%- include('../partials/header.html') %>
     
     <% posts.forEach(function (post) { %>
       <div>
@@ -15,5 +15,7 @@
         <div><%- post.excerpt %></div>
       </div>
     <% }) %>
+
+    <%- include('../partials/footer.html') %>
   </body>
 </html>
