@@ -19,7 +19,7 @@
     "watch:assets": "node lib/assets.js --watch",
     "watch": "yarn run watch:posts & yarn run watch:pages & yarn run watch:scripts & yarn run watch:styles & yarn run watch:assets",
     "clean": "rm -rf ./www",
-    "serve": "browser-sync start --serveStatic www --files=\"www/**/*\" --port 9999 --no-notify --no-open",
+    "serve": "browser-sync start --serveStatic www --files=\"www/**/*.html, www/**/*.css, www/**/*.js\" --port 9999 --no-notify --no-open",
     "start": "yarn run watch & yarn run serve"
   },
   "license": "Private",
