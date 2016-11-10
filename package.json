@@ -41,6 +41,7 @@
     "metalsmith-collections": "^0.7.0",
     "metalsmith-excerpts": "^1.1.0",
     "metalsmith-feed-atom": "^1.0.0",
+    "metalsmith-html-minifier": "^2.2.0",
     "metalsmith-if": "^0.1.1",
     "metalsmith-ignore": "^0.1.2",
     "metalsmith-layouts": "^1.6.5",
