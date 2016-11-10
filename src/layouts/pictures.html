@@ -4,27 +4,22 @@
     <title>Pictures</title>
   </head>
   <body>
-    <h1>{{covers.Vienna}}</h1>
+    <ul id="cities">
+      <% cities.forEach(function (city) { %>
+        <li class="city" data-city="<%= city %>" data-country="<%= citiesObj[city].country %>">
+          <div class="cover">
+            <img src="/<%= covers[city] %>">
+          </div>
 
-    <div id="countries">
-      {{#each countries}}
-        {{this}}
-      {{/each}}
-    </div>
-
-    <div id="cities">
-      {{#each cities}}
-        {{this}}
-      {{/each}}
-    </div>
-
-    {{#each pictures}}
-      <a href="/{{ fullpath }}">
-        <img src="/{{ thumbpath }}">
-        <small>
-          {{ country }} {{ city }}
-        </small>
-      </a>
-    {{/each}}
+          <ul class="city-pictures">
+            <% citiesObj[city].pictures.forEach(function (picture) { %>
+              <li>
+                <img src="<%= picture.thumbpath %>">
+              </li>
+            <% }) %>
+          </ul>
+        </li>
+      <% }) %>
+    </ul>
   </body>
 </html>
