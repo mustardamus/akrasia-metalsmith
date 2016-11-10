@@ -1,10 +1,11 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="/css/index.css">
-    <title>{{ title }}</title>
+    <title><%- title %></title>
   </head>
   <body>
-    {{>navigation}}
-    {{{contents}}}
+    <%- include('../partials/navigation.html') %>
+
+    <%- contents %>
   </body>
 </html>

@@ -4,16 +4,16 @@
     <title>Posts</title>
   </head>
   <body>
-    {{>navigation}}
+    <%- include('../partials/navigation.html') %>
     
-    {{#each posts}}
+    <% posts.forEach(function (post) { %>
       <div>
-        <a href="/{{ path }}">
-          {{ title }}
+        <a href="/<%= post.path %>">
+          <%= post.title %>
         </a>
 
-        <div>{{{excerpt}}}</div>
+        <div><%- post.excerpt %></div>
       </div>
-    {{/each}}
+    <% }) %>
   </body>
 </html>

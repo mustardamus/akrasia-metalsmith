@@ -32,7 +32,6 @@
     "browserify": "^13.1.1",
     "bulma": "^0.2.3",
     "ejs": "^2.5.2",
-    "handlebars": "^4.0.5",
     "lwip": "^0.0.9",
     "metalsmith": "^2.2.2",
     "metalsmith-assets": "^0.1.0",
