@@ -1,5 +1,31 @@
 <header>
-  <a href="/" class="<% if (pagename === 'home') { %>is-active<% } %>">Home</a>
-  <a href="/posts" class="<% if (pagename === 'posts') { %>is-active<% } %>">Blog</a>
-  <a href="/pictures" class="<% if (pagename === 'pictures') { %>is-active<% } %>">Pictures</a>
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-left">
+        <a class="nav-item is-brand" href="/">
+          Akrasia
+        </a>
+      </div>
+
+      <span class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+
+      <div class="nav-right nav-menu">
+        <a href="/" class="nav-item <% if (pagename === 'home') { %>is-active<% } %>">
+          Home
+        </a>
+
+        <a href="/posts" class="nav-item <% if (pagename === 'posts') { %>is-active<% } %>">
+          Blog
+        </a>
+
+        <a href="/pictures" class="nav-item <% if (pagename === 'pictures') { %>is-active<% } %>">
+          Pictures
+        </a>
+      </div>
+    </div>
+  </nav>
 </header>
