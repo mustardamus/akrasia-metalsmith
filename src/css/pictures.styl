@@ -1,12 +1,48 @@
 #pictures
   #cities
+    margin: 20px 0
+    
     .city
+      position: relative
+      margin-bottom: 20px
+      
+      .city-title, .city-show-all
+        position: absolute
+        top: 20px
+        background: rgba(255, 255, 255, 0.7)
+        border-radius: 2px
+        cursor: pointer
+      
+      .city-title
+        left: 20px
+        padding: 20px 50px
+      
+      .city-show-all
+        right: 20px
+        padding: 10px 30px
+
+        .title-hide
+          display: none
+
       .city-cover
         cursor: pointer
 
       .city-pictures
         display: none
+        margin-top: 10px
       
       &.is-active
+        .city-show-all
+          .title-show
+            display: none
+          
+          .title-hide
+            display: inline
+
         .city-pictures
           display: flex
+      
+      &:hover
+        .city-show-all
+          background: rgba(0, 0, 0, 0.7)
+          color: white
