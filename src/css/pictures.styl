@@ -1,16 +1,30 @@
 #pictures
-  #view-toggle
-    margin-top: 20px
+  #sidebar
+    position: relative
 
-    #view-toggle-cities
-      margin-bottom: 10px
-  
-  #cities-menu
-    margin-top: 20px
+    .goto-top
+      position: fixed
+      left: 30px
+      bottom: 30px
+      text-align: center
+      display: none
 
-    li
-      a
-        font-size: 1.44em
+    &.top-link
+      .goto-top
+        display: block
+
+    #view-toggle
+      margin-top: 20px
+
+      #view-toggle-cities
+        margin-bottom: 10px
+    
+    #cities-menu
+      margin-top: 20px
+
+      li
+        a
+          font-size: 1.44em
 
   #cities
     margin: 20px 0
