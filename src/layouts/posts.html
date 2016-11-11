@@ -6,15 +6,17 @@
   <body>
     <%- include('../partials/header.html') %>
     
-    <% posts.forEach(function (post) { %>
-      <div>
-        <a href="/<%= post.path %>">
-          <%= post.title %>
-        </a>
+    <div class="container">
+      <% posts.forEach(function (post) { %>
+        <div>
+          <a href="/<%= post.path %>">
+            <%= post.title %>
+          </a>
 
-        <div><%- post.excerpt %></div>
-      </div>
-    <% }) %>
+          <div><%- post.excerpt %></div>
+        </div>
+      <% }) %>
+    </div>
 
     <%- include('../partials/footer.html') %>
   </body>
