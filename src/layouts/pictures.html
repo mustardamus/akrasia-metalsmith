@@ -9,10 +9,24 @@
     <div class="container" id="pictures">
       <div class="columns">
         <div class="column is-2">
-          <nav class="menu">
+          <div id="view-toggle">
+            <a class="button is-active is-fullwidth" id="view-toggle-cities">
+              Show all Cities
+            </a>
+
+            <a class="button is-fullwidth" id="view-toggle-pictures">
+              Show all Pictures
+            </a>
+          </div>
+
+          <nav class="menu" id="cities-menu">
             <ul class="menu-list">
               <% cities.forEach(function (city) { %>
-                <li><a href="#<%= city %>"><%- city %></a></li>
+                <li>
+                  <a href="#<%= city %>" class="has-text-right">
+                    <%- city %>
+                  </a>
+                </li>
               <% }) %>
             </ul>
           </nav>
@@ -30,24 +44,22 @@
                 <div class="city-show-all">
                   <span class="title-show">Show</span>
                   <span class="title-hide">Hide</span>
-                  all <%= citiesObj[city].pictures.length %> pictures
+                  all <%= citiesObj[city].pictures.length %> Pictures
                 </div>
 
                 <div class="city-cover">
                   <img src="/<%= covers[city] %>">
                 </div>
                 
-                <% if (citiesObj[city].pictures.length > 1) { %>
-                  <div class="columns is-multiline city-pictures">
-                    <% citiesObj[city].pictures.forEach(function (picture) { %>
-                      <div class="column is-4">
-                        <a href="/<%= picture.fullpath %>">
-                          <img src="/<%= picture.thumbpath %>">
-                        </a>
-                      </div>
-                    <% }) %>
-                  </div>
-                <% } %>
+                <div class="columns is-multiline city-pictures">
+                  <% citiesObj[city].pictures.forEach(function (picture) { %>
+                    <div class="column is-4">
+                      <a href="/<%= picture.fullpath %>">
+                        <img src="/<%= picture.thumbpath %>">
+                      </a>
+                    </div>
+                  <% }) %>
+                </div>
               </li>
             <% }) %>
           </ul>
