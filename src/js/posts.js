@@ -1,3 +1,8 @@
-const nice = 'owww yaerh'
+/* global $ */
 
-console.log('easy peasy', nice, 'zu einfach mit nachladen')
+$(() => {
+  $('#posts .post').on('click', function (e) {
+    window.location = $('.title a', this).attr('href')
+    e.preventDefault()
+  })
+})

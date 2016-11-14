@@ -11,9 +11,14 @@
         <div class="post columns">
           <div class="column is-2">
             <div class="date">
-              <span class="day"><%= post.date.split(' ')[0] %></span>
-              <span class="month"><%= post.date.split(' ')[1] %></span>
-              <span class="year"><%= post.date.split(' ')[2] %></span>
+              <div class="day">
+                <%= post.date.split(' ')[0] %>
+              </div>
+
+              <div class="month-year">
+                <span class="month"><%= post.date.split(' ')[1] %></span>
+                <span class="year"><%= post.date.split(' ')[2] %></span>
+              </div>
             </div>
           </div>
 
@@ -33,5 +38,8 @@
     </div>
 
     <%- include('../partials/footer.html') %>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/posts.js"></script>
   </body>
 </html>

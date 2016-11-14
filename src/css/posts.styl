@@ -1,0 +1,47 @@
+#posts
+  .post
+    margin: 50px 0
+    cursor: pointer
+
+    .title a
+      color: #555
+      transition: color 1s ease-out
+
+      &:hover
+        border: none
+    
+    .excerpt
+      color: #555
+      max-width: 800px
+
+      a
+        color: inherit
+
+    &:hover
+      .date
+        background: #aaa
+      
+      .title
+        a
+          color: #111
+      
+      .excerpt
+        color: #111
+
+    .date
+      background: #ccc
+      text-align: center
+      border-radius: 2px
+      box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1)
+      transition: background 1s ease-out
+
+      .day
+        font-size: 3em
+        font-weight: bold
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.2)
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+      
+      .month-year
+        border-top: 1px solid rgba(255, 255, 255, 0.1)
+        padding: 10px
+        text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2)
