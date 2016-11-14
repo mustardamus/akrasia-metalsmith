@@ -5,6 +5,7 @@ $(() => {
   let $sidebar = $('#sidebar')
   let $toggleCities = $('#view-toggle-cities')
   let $togglePictures = $('#view-toggle-pictures')
+  let $modal = $('#picture-show-modal')
   let citiesMenuHeight = $('#cities-menu').height()
 
   $('.city-cover').on('click', function () {
@@ -31,5 +32,15 @@ $(() => {
     } else {
       $sidebar.removeClass('top-link')
     }
+  })
+
+  $cities.find('a').on('click', function (e) {
+    $modal.find('img').attr('src', this.href)
+    $modal.addClass('is-active')
+    e.preventDefault()
+  })
+
+  $modal.find('.modal-close, .modal-background, img').on('click', () => {
+    $modal.removeClass('is-active')
   })
 })
