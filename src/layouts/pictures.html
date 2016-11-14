@@ -59,7 +59,7 @@
                   <% citiesObj[city].pictures.forEach(function (picture) { %>
                     <div class="column is-4">
                       <a href="/<%= picture.fullpath %>">
-                        <img src="/<%= picture.thumbpath %>">
+                        <img data-src="/<%= picture.thumbpath %>">
                       </a>
                     </div>
                   <% }) %>

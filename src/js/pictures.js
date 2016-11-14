@@ -8,8 +8,24 @@ $(() => {
   let $modal = $('#picture-show-modal')
   let citiesMenuHeight = $('#cities-menu').height()
 
+  const loadThumbs = ($parent) => {
+    $parent.find('[data-src]').each((el) => {
+      let $el = $(el)
+
+      $el.attr('src', $el.data('src'))
+      $el.attr('data-src', null)
+    })
+  }
+
   $('.city-cover').on('click', function () {
-    $(this).parent().toggleClass('is-active')
+    let $parent = $(this).parent()
+
+    if ($parent.hasClass('is-active')) {
+      $parent.removeClass('is-active')
+    } else {
+      $parent.addClass('is-active')
+      loadThumbs($parent)
+    }
   })
 
   $toggleCities.on('click', () => {
@@ -22,6 +38,7 @@ $(() => {
     $cities.addClass('only-pictures')
     $togglePictures.addClass('is-active')
     $toggleCities.removeClass('is-active')
+    loadThumbs($cities)
   })
 
   $(window).on('scroll', () => {
