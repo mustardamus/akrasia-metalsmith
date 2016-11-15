@@ -6,41 +6,12 @@
 @import "../../node_modules/bulma/css/bulma.css"
 @import "./vendors/atom-one-dark.css"
 
+@import "header"
 @import "pictures"
 @import "posts"
 
 html, body
   background: linear-gradient(to bottom, rgba(43,76,126,1) 0%,rgba(86,126,187,1) 95%) fixed
-
-header
-  .nav
-    background: #1F1F20
-    outline: 5px solid rgba(255, 255, 255, 0.1)
-    
-
-    .is-brand
-      font-size: 2em
-    
-    .nav-menu
-      a 
-        color: white
-        font-size: 1.2em
-        padding: 0 20px
-        font-family: 'Lato', sans-serif
-
-        &:hover
-          text-decoration: underline
-
-        &:last-child
-          padding-right: 20px !important
-
-        &.is-active
-          background: #606D80
-          box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5)
-          text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2)
-        
-          &:hover
-            text-decoration: none
 
 .container
   max-width: 960px
