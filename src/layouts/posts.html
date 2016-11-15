@@ -5,6 +5,10 @@
   </head>
   <body>
     <%- include('../partials/header.html') %>
+
+    <div class="container banner">
+      Choose from <b><%= posts.length %></b> posts about Coding, Traveling and Life
+    </div>
     
     <div class="container wrapper" id="posts">
       <% posts.forEach(function (post) { %>

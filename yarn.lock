@@ -2519,7 +2519,7 @@ lodash.transform@^3.0.3:
     lodash.istypedarray "^3.0.0"
     lodash.keys "^3.0.0"
 
-lodash@^3.10.1, lodash@3.x:
+lodash@^3.10.1, lodash@^3.8.0, lodash@3.x:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
@@ -2682,6 +2682,14 @@ metalsmith-metallic:
 metalsmith-move-remove@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/metalsmith-move-remove/-/metalsmith-move-remove-0.0.1.tgz#5e51edb23d399a5e57e27a2359b2a83c5e30136f"
+
+metalsmith-move-up:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/metalsmith-move-up/-/metalsmith-move-up-1.0.0.tgz#b67cc98bcd670fd8a8e4c4e0de0bb50e100ed9f6"
+  dependencies:
+    async "^0.9.0"
+    lodash "^3.8.0"
+    multimatch "^2.0.0"
 
 metalsmith-permalinks@^0.5.0:
   version "0.5.0"
