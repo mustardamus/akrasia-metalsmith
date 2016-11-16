@@ -2,11 +2,9 @@
 
 $(() => {
   let $cities = $('#cities')
-  let $sidebar = $('#sidebar')
   let $toggleCities = $('#view-toggle-cities')
   let $togglePictures = $('#view-toggle-pictures')
   let $modal = $('#picture-show-modal')
-  let citiesMenuHeight = $('#cities-menu').height()
 
   const loadThumbs = ($parent) => {
     $parent.find('[data-src]').each((el) => {
@@ -39,16 +37,6 @@ $(() => {
     $togglePictures.addClass('is-active')
     $toggleCities.removeClass('is-active')
     loadThumbs($cities)
-  })
-
-  $(window).on('scroll', () => {
-    let top = window.pageYOffset || document.documentElement.scrollTop
-
-    if (top > citiesMenuHeight) {
-      $sidebar.addClass('top-link')
-    } else {
-      $sidebar.removeClass('top-link')
-    }
   })
 
   $cities.find('a').on('click', function (e) {
