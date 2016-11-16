@@ -9,42 +9,56 @@
     &:last-child
       margin-bottom: 0
 
-    .title a
-      color: #555
-      transition: color 1s ease-out
+    .title
+      font-size: 1.68em
+      line-height: 26px
+      padding-top: 4px
 
-      &:hover
-        border: none
+      a
+        color: #1F1F20
+        transition: color 1s ease-out
+
+        &:hover
+          border: none
     
     .excerpt
       color: #555
+      font-size: 1.2em
+      text-align: justify
 
       a
         color: inherit
 
+        &:hover
+          text-decoration: none
+
     &:hover
       .date
-        background: #aaa
+        background: #567EBB
+        color: white
       
       .title
         a
           color: #111
       
       .excerpt
-        color: #111
+        color: #1F1F20
 
     .date
-      background: #ccc
+      background: #DCE0E6
+      color: #1F1F20
       text-align: center
       border-radius: 2px
       box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1)
-      transition: background 1s ease-out
+      transition: background 0.8s ease-out
+      transition: color 0.4s ease-out
 
       .day
         font-size: 3em
         font-weight: bold
         text-shadow: 0 0 10px rgba(255, 255, 255, 0.2)
         border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+        font-family: 'Lancelot', serif
       
       .month-year
         border-top: 1px solid rgba(255, 255, 255, 0.1)
