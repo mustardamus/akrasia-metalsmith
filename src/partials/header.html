@@ -15,23 +15,23 @@
 
       <div class="nav-right nav-menu">
         <a href="/posts" class="nav-item <% if (pagename === 'posts') { %>is-active<% } %>">
-          Blog
+          <%- include('../assets/icons/archive.svg') %> Blog
         </a>
 
         <a href="/pictures" class="nav-item <% if (pagename === 'pictures') { %>is-active<% } %>">
-          Pictures
+          <%- include('../assets/icons/images.svg') %> Pictures
         </a>
 
         <a href="/about" class="nav-item <% if (pagename === 'about') { %>is-active<% } %>">
-          About
+          <%- include('../assets/icons/fingerprint.svg') %> About
         </a>
 
         <a href="/skills" class="nav-item <% if (pagename === 'skills') { %>is-active<% } %>">
-          Skills
+          <%- include('../assets/icons/tools.svg') %> Skills
         </a>
 
         <a href="/contact" class="nav-item <% if (pagename === 'contact') { %>is-active<% } %>">
-          Contact
+          <%- include('../assets/icons/chat.svg') %> Contact
         </a>
       </div>
     </div>

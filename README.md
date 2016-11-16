@@ -126,3 +126,8 @@ will be reloaded automatically.
 
 Runs `yarn run watch` and `yarn run serve`. If you want to develop the site, run
 this command.
+
+
+## Used Resources
+
+- [Entypo Icons](http://www.entypo.com/)
