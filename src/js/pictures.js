@@ -7,12 +7,12 @@ $(() => {
   let $modal = $('#picture-show-modal')
 
   const loadThumbs = ($parent) => {
-    $parent.find('[data-src]').each((el) => {
-      let $el = $(el)
+    for (let img of $('img[data-src]', $parent)) {
+      let $img = $(img)
+      let src = $img.data('src')
 
-      $el.attr('src', $el.data('src'))
-      $el.attr('data-src', null)
-    })
+      $img.attr({ src, 'data-src': null })
+    }
   }
 
   $('.city-cover').on('click', function () {
@@ -39,13 +39,13 @@ $(() => {
     loadThumbs($cities)
   })
 
-  $cities.find('a').on('click', function (e) {
-    $modal.find('img').attr('src', this.href)
+  $('a', $cities).on('click', function (e) {
+    $('img', $modal).attr('src', this.href)
     $modal.addClass('is-active')
     e.preventDefault()
   })
 
-  $modal.find('.modal-close, .modal-background, img').on('click', () => {
+  $('.modal-close, .modal-background, img', $modal).on('click', () => {
     $modal.removeClass('is-active')
   })
 })
