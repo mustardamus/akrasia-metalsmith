@@ -29,10 +29,20 @@ html, body
     background: white
     outline: 10px solid rgba(0, 0, 0, 0.1)
     padding: 20px
-    margin: 100px auto 100px auto
+    margin: 100px auto
     border-radius: 2px
     font-family: 'Lato', sans-serif
 
 .footer
   background: #1F1F20
   outline: 5px solid rgba(255, 255, 255, 0.1)
+
+@media only screen and (max-width: 768px)
+  .container
+    &.banner
+      font-size: 2em
+      margin-top: 30px
+      line-height: 30px
+    
+    &.wrapper
+      margin: 30px auto 60px auto
