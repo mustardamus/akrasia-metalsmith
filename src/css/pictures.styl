@@ -16,15 +16,33 @@
     #view-toggle
       margin-top: 20px
 
-      #view-toggle-cities
-        margin-bottom: 10px
+      .button
+        background: #DCE0E6
+        border: none
+        font-size: 0.9em
+        margin-bottom: 5px
+
+        &:hover
+          background: #567EBB
+          color: white
+        
+        &.is-active
+          background: #2B4C7E
+          color: white
     
     #cities-menu
-      margin-top: 20px
+      margin-top: 25px
+      padding-top: 20px
+      border-top: 2px solid #606D80
 
       li
         a
           font-size: 1.44em
+
+          &:hover
+            background: #567EBB
+            color: white
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2)
 
   #cities
     margin: 20px 0
