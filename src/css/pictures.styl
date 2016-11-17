@@ -2,17 +2,6 @@
   #sidebar
     position: relative
 
-    .goto-top
-      position: fixed
-      left: 30px
-      bottom: 30px
-      text-align: center
-      display: none
-
-    &.top-link
-      .goto-top
-        display: block
-
     #view-toggle
       margin-top: 20px
 
@@ -49,12 +38,14 @@
 
     &.only-pictures
       .city
+        margin-bottom: 50px
+        
         .city-title
           position: relative
           cursor: default
           top: 0
           left: 0
-          padding: 20px
+          padding: 10px 0
         
         .city-show-all
           display: none
@@ -79,10 +70,18 @@
       .city-title
         left: 20px
         padding: 20px 50px
+        text-align: center
+        transition: all 0.4s ease-out
+        transition-property: background, color
+
+        .subtitle
+          font-family: 'Lancelot', serif
       
       .city-show-all
         right: 20px
         padding: 10px 30px
+        transition: all 0.4s ease-out
+        transition-property: background, color
 
         .title-hide
           display: none
@@ -106,9 +105,15 @@
           display: flex
       
       &:hover
-        .city-show-all
-          background: rgba(0, 0, 0, 0.7)
+        .city-title, .city-show-all
+          background: #567EBB
           color: white
+          text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2)
+        
+        .city-title
+          .title, .subtitle
+            color: white
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2)
 
 #picture-show-modal
   .modal-content
