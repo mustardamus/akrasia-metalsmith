@@ -1,9 +1,59 @@
 #contact
+  margin-bottom: 0
+
+  .column
+    margin-bottom: 0
+    padding-bottom: 0
+
+  form
+    background: #DCE0E6
+    border-radius: 2px
+    padding: 20px
+    margin-bottom: 0
+
+    input[name="email"], textarea[name="message"]
+      font-size: 1.8em
+      font-family: 'Lato', sans-serif
+      padding: 10px
+      height: auto
+      border: 3px solid rgba(0, 0, 0, 0.2)
+      transition: border 0.4s ease-out
+
+      &:focus
+        border: 3px solid #567EBB
+    
+    textarea[name="message"]
+      font-size: 1.2em
+      min-height: 320px
+    
+    .control
+      margin: 0 0 20px 0
+
+      &:last-child
+        margin: 0
+    
+    .button
+      background: #567EBB
+      color: white
+      font-family: 'Lato', sans-serif
+      font-size: 1.8em
+      padding: 10px 0
+      height: auto
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2)
+      transition: background 0.4s ease-out
+
+      &:hover
+        background: #2B4C7E
+
+
   .link-list
-    padding-top: 50px
+    padding-top: 32px
 
     li
       margin-bottom: 50px
+
+      &:last-child
+        margin: 0
 
       a
         position: relative
