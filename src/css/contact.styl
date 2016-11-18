@@ -1,0 +1,41 @@
+#contact
+  .link-list
+    padding-top: 50px
+
+    li
+      margin-bottom: 50px
+
+      a
+        position: relative
+
+        .title
+          font-family: 'Lancelot', sans-serif
+          display: block
+          padding: 0 0 8px 48px
+          margin: 0
+          color: #1F1F20
+        
+        .desc
+          font-family: 'Lato', sans-serif
+          display: block
+          color: #555
+          font-size: 1.1em
+          padding-left: 48px
+          transition: color 0.4s ease-out
+          text-align: justify
+
+        svg
+          position: absolute
+          top: -3px
+          left: 0
+          width: 36px
+          height: 36px
+          fill: #606D80
+          transition: fill 0.4s ease-out
+        
+        &:hover
+          svg
+            fill: #567EBB
+          
+          .desc
+            color: #1F1F20
