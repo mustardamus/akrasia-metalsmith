@@ -11,6 +11,8 @@ $(() => {
   let $message = $('textarea[name="message"]')
   let $button = $('button')
 
+  $email.focus()
+
   $form.on('submit', (e) => {
     let email = $email.val()
     let message = $message.val()
