@@ -1,10 +1,56 @@
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <p>
-        <a href="https://github.com/mustardamus/akrasia-metalsmith">Handmade</a>
-        with love and help by <a href="http://www.metalsmith.io">Metalsmith</a>.
-      </p>
+    <div class="columns">
+      <div class="column link-list">
+        <ul>
+          <li class="<% if (pagename === 'home') { %>is-active<% } %>">
+            <a href="/posts">
+              <%- include('../assets/icons/globe.svg') %> Home
+            </a>
+          </li>
+
+          <li class="<% if (pagename === 'posts') { %>is-active<% } %>">
+            <a href="/posts">
+              <%- include('../assets/icons/archive.svg') %> Blog
+            </a>
+          </li>
+
+          <li class="<% if (pagename === 'pictures') { %>is-active<% } %>">
+            <a href="/pictures">
+              <%- include('../assets/icons/images.svg') %> Pictures
+            </a>
+          </li>
+
+          <li class="<% if (pagename === 'about') { %>is-active<% } %>">
+            <a href="/about">
+              <%- include('../assets/icons/fingerprint.svg') %> About
+            </a>
+          </li>
+
+          <li class="<% if (pagename === 'skills') { %>is-active<% } %>">
+            <a href="/skills">
+              <%- include('../assets/icons/tools.svg') %> Skills
+            </a>
+          </li>
+
+          <li class="<% if (pagename === 'contact') { %>is-active<% } %>">
+            <a href="/contact">
+              <%- include('../assets/icons/chat.svg') %> Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="column">
+        short bio
+      </div>
+      
+      <div class="column">
+        <p>
+          <a href="https://github.com/mustardamus/akrasia-metalsmith">Handmade</a>
+          with love and help by <a href="http://www.metalsmith.io">Metalsmith</a>.
+        </p>
+      </div>
     </div>
   </div>
 </footer>

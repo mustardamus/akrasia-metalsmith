@@ -1,0 +1,45 @@
+.footer
+  background: #1F1F20
+  outline: 5px solid rgba(255, 255, 255, 0.1)
+  font-family: 'Lato', sans-serif
+
+  a
+    color: rgba(255, 255, 255, 0.6) !important
+    border: none !important
+    transition: color 0.4s ease-out
+
+    &:hover
+      text-decoration: none !important
+      color: white !important
+
+  .link-list
+    li
+      &.is-active
+        a
+          color: rgba(255, 255, 255, 0.2) !important
+
+          svg
+            fill: rgba(255, 255, 255, 0.2) !important
+      a
+        font-size: 1.2em
+        padding: 5px 0
+        display: block
+
+        svg
+          margin-right: 4px
+
+        &:hover
+          svg
+            fill: white
+
+        svg
+          width: 20px
+          height: 20px
+          fill: rgba(255, 255, 255, 0.4)
+          transition: fill 0.4s ease-out
+
+@media only screen and (max-width: 768px)
+  footer
+    .link-list
+      li a
+        text-align: center
