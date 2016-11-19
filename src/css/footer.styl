@@ -7,6 +7,7 @@
     color: rgba(255, 255, 255, 0.6) !important
     border: none !important
     transition: color 0.4s ease-out
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2)
 
     &:hover
       text-decoration: none !important
@@ -37,9 +38,37 @@
           height: 20px
           fill: rgba(255, 255, 255, 0.4)
           transition: fill 0.4s ease-out
+  
+  .short-bio
+    position: relative
+
+    img
+      position: absolute
+      top: 10px
+      left: -90px
+      width: 80px
+    
+    p
+      font-size: 1.2em
+      color: white
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2)
+      cursor: default
+      text-align: justify
+      line-height: 24px
+      margin-bottom: 16px
 
 @media only screen and (max-width: 768px)
   footer
     .link-list
-      li a
-        text-align: center
+      margin-top: 25px
+
+      li
+        a
+          text-align: center
+          font-size: 1.8em !important
+    
+    .short-bio
+      display: none
+    
+    .resource-list
+      display: none
