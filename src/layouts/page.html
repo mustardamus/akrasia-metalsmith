@@ -1,6 +1,13 @@
 <html>
   <head>
-    <title><%= title %></title>
+    <title>
+      Akrasia -
+      <% if (pagename === 'home') { %>
+        Sebastian Senf, web-developing digital nomand
+      <% } else { %>
+        <%= title %>
+      <% } %>
+    </title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
