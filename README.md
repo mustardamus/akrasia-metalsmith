@@ -22,13 +22,50 @@ together.
 
 #### `yarn run build:assets` & `yarn run watch:assets`
 
-#### `yarn run build:scripts` & `yarn run watch:scripts` 
+This will copy the `./src/assets` folder to `./www/assets`. Put all static
+resources in here.
+
+#### `yarn run build:scripts` & `yarn run watch:scripts`
+
+This will bundle each `*.js` file in `./src/js` with
+[Browserify](http://browserify.org/) and transpile them with
+[Babel](https://babeljs.io/), so you can write neat ES2015. Note that really
+each file in this folder will be a separate bundle - that is useful to leave
+out unnecesary code for different pages.  
 
 #### `yarn run build:styles` & `yarn run watch:styles` 
 
+This will bundle the stylesheet with [Stylus](http://stylus-lang.com/). Note
+that unlike scripts, there is only one entry point you can find at
+`./src/css/index.styl`. There you can `import` other stylus files or ordinary
+CSS files. Auto-prefixing is enabled, so you don't have to care about it.
+
 ### [Pages](./lib/pages.js)
 
+You can find the pages in `./src/pages` as `*.html` partials. They will be
+wrapped with the `./src/layouts/page.html` layout.
+
+Each page must have a YAML front-matter with the following informations:
+
+      ---
+      title: The page <title>
+      pagename: The page name (to be processed in header.html and footer.html partials)
+      banner: The banner text above the actual page content
+      ---
+
+Note that `./src/pages/index.html` is the home page, aka the `/` root route.
+
 #### `yarn run build:pages` & `yarn run watch:pages`
+
+This will build all static pages. Instead of putting them in the subfolder
+`pages` like in `./src`, they will be copied one folder up. Also permalinks will
+be created, for example:
+
+    ./src/pages/skills.html -> ./www/skills/index.html
+    ./src/pages/index.html -> ./www/index.html
+
+That way we can have neat URL's. Additionally the HTML will be minified.
+
 
 ### [Posts](./lib/posts.js)
 
