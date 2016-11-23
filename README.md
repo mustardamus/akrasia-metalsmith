@@ -188,3 +188,6 @@ this command.
 ## Used Resources
 
 - [Entypo Icons](http://www.entypo.com/)
+- [Lato Font](https://fonts.google.com/specimen/Lato)
+- [Lancelot Font](https://fonts.google.com/specimen/Lancelot)
+- [Inconsolata Font](https://fonts.google.com/specimen/Inconsolata)
