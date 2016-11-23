@@ -69,7 +69,27 @@ That way we can have neat URL's. Additionally the HTML will be minified.
 
 ### [Posts](./lib/posts.js)
 
+All posts are located in `./src/posts` and are written in
+[Markdown](https://daringfireball.net/projects/markdown/syntax). They will be
+wrapped with the `./src/layouts/post.html` layout.
+
+Each post must have a YAML front-matter with the following informations:
+
+    ---
+    title: Title of the post (will be displayed as banner above the content)
+    date: YYYY-MM-DD (the date when the post was published)
+    ---
+
+The index of all posts is created from the `./src/layouts/posts.html` layout.
+
 #### `yarn run build:posts` & `yarn run watch:posts`
+
+Builds all post. Permalinks will be created, for example:
+
+    ./src/posts/post-title.md -> ./www/posts/post-title/index.html
+    ./src/layouts/posts.html -> ./www/posts/index.html
+
+That way we can have neat URL's. Additionally the HTML will be minified.
 
 ### [Pictures](./lib/pictures.js)
 
